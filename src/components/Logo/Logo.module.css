@@ -1,0 +1,15 @@
+/** initially logo height 80% but can be adjusted in toolbar **/
+.Logo {
+    background-color: white;
+    padding: 8px;
+    height: 100%;
+    box-sizing: border-box ;
+    border-radius: 5px;
+}
+
+.Logo img {
+    height: 100%;
+    
+}
+
+/** height initially did not work with mobile form-format to adust  logo height in toolbar instead of adding media query **/

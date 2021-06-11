@@ -1,0 +1,43 @@
+.SideDrawer {
+    position:fixed;
+    width: 280px;
+    max-width: 60%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 200;
+    background-color: rgb(248, 244, 244);
+    padding: 90px 16px;
+    box-sizing: border-box;
+    transition: transform 0.3s ease-out;
+
+}
+
+
+@media ( min-width:1000px){
+    .SideDrawer{
+        display: none;
+        
+    }
+    /** included logo here **/
+    .Logo2{
+        display: none;
+    }
+}
+
+/** Responsible for playing animation, basically shift sidedraw to position defined up intransform , shift sidedraw in position **/
+.Open {
+    transform: translateX(0);
+}
+
+.Close {
+    transform: translateX(-100%);
+}
+
+.Logo2 {
+    /** adjusted height from % added margintop and width  different from o'reilly 11% , 32px **/
+    height:180px;
+    width:5%;
+    margin-top: 70px;
+    margin-bottom: 32px;
+}
