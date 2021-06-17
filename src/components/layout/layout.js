@@ -6,9 +6,7 @@ import SideDrawer2 from '../Navigation/SideDrawer/SideDrawer.js'
 import Toolbar from '../Navigation/Toolbar/Toolbar.js'
 
 
-
-
-
+//updated to class
 class Layout extends Component{
 
     state = { 
