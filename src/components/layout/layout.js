@@ -1,10 +1,9 @@
 import React, {Component} from 'react'
 
 import Aux from '../../hoc/Auxillary'
-//import drawToggle from '../Navigation/SideDrawer/DrawToggle'
 import styles from '../layout/Layout.module.css'
-import SideDrawer2 from '../../components/Navigation/SideDrawer/SideDrawer.js'
-import Toolbar from '../../components/Navigation/Toolbar/Toolbar.js'
+import SideDrawer2 from '../Navigation/SideDrawer/SideDrawer.js'
+import Toolbar from '../Navigation/Toolbar/Toolbar.js'
 
 
 
@@ -26,7 +25,7 @@ class Layout extends Component{
             return {showsSideDrawer: !prevState.showsSideDrawer};
         } );
     }
-
+    
 
     render(){
         return(
