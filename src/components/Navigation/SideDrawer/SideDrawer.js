@@ -11,23 +11,26 @@ const sideDrawer = (props) => {
     // modified logo jsx to Logo2 
     
     let attachedClasses = [styles.SideDrawer,styles.Close];
-    if( props.open){
-        attachedClasses = [styles.SideDrawer,styles.Open];
+    if(props.open){
+        attachedClasses = [styles.SideDrawer, styles.Open];
+    
     }
     return (
         <Aux>
-        <Backdrop show={props.open } clicked={props.closed}  />
-            <div className={attachedClasses.join('')} >
-                
-                <div className={styles.Logo2}>
-                   <Logo/>
-                </div>
-                <nav>
-                <NavigationItems/>
-                </nav>
+            <Backdrop show={props.open } clicked={props.closed}/>  
+            <div className={attachedClasses.join(' ')} >
+             
+            <div className={styles.Logo}>
+                 <Logo />
 
-                
             </div>
+            <nav>
+                <NavigationItems />
+            </nav>
+
+            </div>
+
+
         </Aux>
     );
 };
