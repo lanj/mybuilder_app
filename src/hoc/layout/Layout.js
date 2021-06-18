@@ -1,20 +1,12 @@
 import React, {Component} from 'react'
 
-<<<<<<< HEAD:src/components/layout/layout.js
-import Aux from '../../hoc/Auxillary'
-import styles from '../layout/Layout.module.css'
-import SideDrawer2 from '../Navigation/SideDrawer/SideDrawer.js'
-import Toolbar from '../Navigation/Toolbar/Toolbar.js'
-=======
 import Aux from '../auxillary/Auxillary'
-//import drawToggle from '../Navigation/SideDrawer/DrawToggle'
 import styles from './Layout.module.css'
 import SideDrawer2 from '../../components/Navigation/SideDrawer/SideDrawer.js'
 import Toolbar from '../../components/Navigation/Toolbar/Toolbar.js'
 
 
 
->>>>>>> burger4:src/hoc/layout/Layout.js
 
 
 //updated to class
