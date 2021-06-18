@@ -1,22 +1,26 @@
-import React from 'react';
-import Aux from '../../../hoc/Auxillary';
+
+import React , {Component} from 'react';
+import Aux from '../../../hoc/auxillary/Auxillary';
 import Button from '../../UI/Button/Button';
 
-const orderSummary = (props) => {
-    
-// you could pass convert the object props.ingredients to array and pass it on, or pass object and then convert
-// using object.keys to transform to array of keys. output be returned in list <li> salad: 1 </li>
-// {{}} used as dynamic entry to create object with inner brace java object. textransform - transforms text to captial
-const ingredientSummary = Object.keys(props.ingredients).map(igKey => {
+class OrderSummary extends Component {
+  //check if it updates
+  componentDidUpdate(){
+    console.log('[OrderSummary] willupdate');
+  }
+
+render(){  
+
+  const ingredientSummary = Object.keys(this.props.ingredients).map(igKey => {
     return (
     <li key={igKey}>
         <span style={{textTransform: 'capitalize'}}>
-            {igKey}</span>: {props.ingredients[igKey]}      
+            {igKey}</span>: {this.props.ingredients[igKey]}      
     </li>);
-});
+  });
 
+   return(
 
-  return (
     <Aux>
      
      
@@ -24,15 +28,15 @@ const ingredientSummary = Object.keys(props.ingredients).map(igKey => {
       <ul>
           {ingredientSummary}
       </ul>
-      <p><strong>Total Price: {props.price}</strong></p>
+      <p><strong>Total Price: {this.props.price}</strong></p>
       <p>Continue to Checkout?</p>
-      <Button btnType="Danger" clicked={props.purchaseCanceled } >CANCEL</Button>
-      <Button btnType="Success" clicked={props.purchaseContinued } >CONTINUE</Button>
+      <Button btnType="Danger" clicked={this.props.purchaseCanceled } >CANCEL</Button>
+      <Button btnType="Success" clicked={this.props.purchaseContinued } >CONTINUE</Button>
     </Aux>
-  )
-};
 
-export default orderSummary;
+   );
+}
+    
+}
 
-
-//<h3> Your Order</h3>
+export default OrderSummary;

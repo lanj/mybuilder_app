@@ -3,7 +3,7 @@ import Logo from '../../Logo/Logo';
 import NavigationItems from '../navigationItems/NavigationItems';
 import styles from './SideDrawer.module.css';
 import Backdrop from '../../UI/Backdrop/Backdrop';
-import Aux from '../../../hoc/Auxillary';
+import Aux from '../../../hoc/auxillary/Auxillary';
 
 const sideDrawer = (props) => {
     //.. in Logo you could set height as inline property directly such as height="11%" instead of using div wrap

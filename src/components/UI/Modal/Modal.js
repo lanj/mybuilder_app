@@ -1,28 +1,50 @@
-import React from 'react';
+import React,{Component} from 'react';
 import styles from './Modal.module.css';
-import Aux from '../../../hoc/Auxillary'
+import Aux from '../../../hoc/auxillary/Auxillary'
 import Backdrop from '../Backdrop/Backdrop';
 
 
 
 
 
-const modal = (props) => (
-  <Aux>
-    <Backdrop show={props.show} clicked={props.modalClosed}/>
+class Modal extends Component {
 
-    <div className={styles.Modal}
-       
-    // 'translateY(-100vh) vh is viewport height
-     style={{
-       transform: props.show ? 'translateY(0)': 'translateY(-100vh)',
-        opacity: props.show ? '1': '0'
+  /**check if  it is worth re- rendering , by checking if updates*/
+  shouldComponentUpdate(nextProps, nextState){
+   /**  if(nextProps.show !== this.props.show){
+      return true;
+    } **/
+    return nextProps.show !== this.props.show;
+  }
+
+  componentWillUpdate(){
+    console.log('[Modal],willupdate')
+  }
+
+  render(){
+
+      return(
+        <Aux>
+        <Backdrop show={this.props.show} clicked={this.props.modalClosed}/>
     
-    }}
-    >
-      {props.children}
-    </div>
-  </Aux>
-)
+        <div className={styles.Modal}
+           
+        // 'translateY(-100vh) vh is viewport height
+         style={{
+           transform:this.props.show ? 'translateY(0)': 'translateY(-100vh)',
+            opacity: this.props.show ? '1': '0'
+        
+        }}
+        >
+          {this.props.children}
+        </div>
+      </Aux>
 
-export default modal;
+      );
+
+  }
+
+
+}
+
+export default Modal;
